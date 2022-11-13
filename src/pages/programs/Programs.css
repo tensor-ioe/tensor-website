@@ -1,3 +1,12 @@
-h1 {
-    color: purple;
+.Programs-section {
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+    padding: 0 6.25rem;
+}
+
+.Programs-content {
+    margin-top: 4.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
 }

@@ -3,13 +3,12 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 import './Home.css';
-import heroImage from '../../assets/hero-image-2x.webp'
 import aboutCardImg from '../../assets/about-card-img.svg'
-import teamMemberPhoto from '../../assets/team-member-photo-2.jpg'
 import facebookIcon from '../../assets/facebook-icon.svg';
 import linkedinIcon from '../../assets/linkedin-icon.svg';
 import discordIcon from '../../assets/discord-icon.svg';
 import instagramIcon from '../../assets/instagram-icon.svg';
+import githubIcon from '../../assets/github-icon.svg';
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import AboutCard from "../../components/AboutCard/AboutCard";
 import TeamPhoto from "../../components/TeamPhoto/TeamPhoto";
@@ -35,7 +34,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="Home-hero-div-image">
-                    <img className="Home-hero-image" src={heroImage} alt="Tensor" />
+                    <img className="Home-hero-image" src="/images/assets/hero-image-2x.webp" alt="Tensor" />
                 </div>
             </section>
 
@@ -70,42 +69,42 @@ export default function Home() {
                 <div className="Home-team-content">
                     <TeamPhoto
                         name={"John Doe"}
-                        image={teamMemberPhoto}
+                        image={"/images/member/team-member-photo-2.jpg"}
                         post={"Coordinator"}
                     />
                     <TeamPhoto
                         name={"John Doe"}
-                        image={teamMemberPhoto}
+                        image={"/images/member/team-member-photo-2.jpg"}
                         post={"Coordinator"}
                     />
                     <TeamPhoto
                         name={"John Doe"}
-                        image={teamMemberPhoto}
+                        image={"/images/member/team-member-photo-2.jpg"}
                         post={"Coordinator"}
                     />
                     <TeamPhoto
                         name={"John Doe"}
-                        image={teamMemberPhoto}
+                        image={"/images/member/team-member-photo-2.jpg"}
                         post={"Coordinator"}
                     />
                     <TeamPhoto
                         name={"John Doe"}
-                        image={teamMemberPhoto}
+                        image={"/images/member/team-member-photo-2.jpg"}
                         post={"Coordinator"}
                     />
                     <TeamPhoto
                         name={"John Doe"}
-                        image={teamMemberPhoto}
+                        image={"/images/member/team-member-photo-2.jpg"}
                         post={"Coordinator"}
                     />
                     <TeamPhoto
                         name={"John Doe"}
-                        image={teamMemberPhoto}
+                        image={"/images/member/team-member-photo-2.jpg"}
                         post={"Coordinator"}
                     />
                     <TeamPhoto
                         name={"John Doe"}
-                        image={teamMemberPhoto}
+                        image={"/images/member/team-member-photo-2.jpg"}
                         post={"Coordinator"}
                     />
                 </div>
@@ -115,16 +114,16 @@ export default function Home() {
                 <SectionTitle title={"Social Links"} />
                 <div className="Home-links-content">
                     <SocialLink
-                        icon={linkedinIcon}
-                        name={"LinkedIn"}
-                        username={"tensorioe"}
-                        link={"https://www.linkedin.com/company/tensorioe"}
-                    />
-                    <SocialLink
                         icon={facebookIcon}
                         name={"Facebook"}
                         username={"TensorIOE"}
                         link={"https://www.facebook.com/TensorIOE"}
+                    />
+                    <SocialLink
+                        icon={linkedinIcon}
+                        name={"LinkedIn"}
+                        username={"tensorioe"}
+                        link={"https://www.linkedin.com/company/tensorioe"}
                     />
                     <SocialLink
                         icon={discordIcon}
@@ -137,6 +136,12 @@ export default function Home() {
                         name={"Instagram"}
                         username={"tensorioe"}
                         link={"https://linkedin.com/in/tensorioe"}
+                    />
+                    <SocialLink
+                        icon={githubIcon}
+                        name={"Github"}
+                        username={"tensorioe"}
+                        link={"https://github.com/tensorioe"}
                     />
                 </div>
             </section>

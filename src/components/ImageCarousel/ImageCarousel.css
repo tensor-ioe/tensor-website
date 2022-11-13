@@ -1,0 +1,65 @@
+.ImageCarousel {
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    border: 0.25rem solid #99CFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.ImageCarousel-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
+}
+
+.ImageCarousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ImageCarousel-active-anim {
+    opacity: 1;
+}
+
+.ImageCarousel-btn {
+    cursor: pointer;
+}
+
+.ImageCarousel-previous {
+    position: absolute;
+    top: 50%;
+    left: 1.125rem;
+    transform: translateY(-60%);
+}
+
+.ImageCarousel-next {
+    position: absolute;
+    top: 50%;
+    right: 1.125rem;
+    transform: translateY(-60%);
+}
+
+.ImageCarousel-dots-container {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.ImageCarousel-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: 0.125rem solid #FDFDFD;
+    margin: 0 0.3125rem;
+    background: #FDFDFD;
+}
+
+.ImageCarousel-dot.ImageCarousel-dot-active {
+    background: #14213D;
+}
