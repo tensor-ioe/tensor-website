@@ -1,0 +1,36 @@
+.AboutCard {
+    flex: 0 0 50%;
+}
+
+.AboutCard-wrapper {
+    border-radius: 0.625rem;
+    background-color: #D5E8F7;
+    padding: 2rem;
+    margin: 0.625rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.AboutCard-title-div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.AboutCard img {
+    padding: 0.5rem;
+    border-bottom: 0.125rem solid #000000;
+}
+
+.AboutCard-title {
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.AboutCard-description {
+    font-size: 1rem;
+    line-height: 146.9%;
+    color: #000000;
+}

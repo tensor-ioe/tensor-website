@@ -1,0 +1,47 @@
+.ContactUsForm {
+    flex: 0 0 50%;
+}
+
+.ContactUsForm-wrapper {
+    border-radius: 0.625rem;
+    padding: 2rem 1.25rem 2rem;
+    margin-right: 1.25rem;
+    border: 3px solid #99CFFF;
+    height: 100%;
+}
+
+.ContactUsForm input, .ContactUsForm textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #000000;
+    padding: 0.75rem;
+    background: #ECECEC;
+    border-radius: 0.3125rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.ContactUsForm textarea {
+    resize: vertical;
+    height: fit-content;
+}
+
+.ContactUsForm-submit-button {
+    background: #1360A5;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    border: none;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #FDFDFD;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ContactUsForm-name-email-wrapper {
+    display: flex;
+    column-gap: 1.25rem;
+}

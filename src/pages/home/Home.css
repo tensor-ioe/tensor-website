@@ -1,0 +1,143 @@
+.Home-navbar {
+    position: absolute;
+    /* position: fixed;
+    z-index: 999; */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.Home-hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 6.25rem;
+}
+
+.Home-hero-div-main {
+    flex: 0 0 50%;
+    margin: auto 0;
+    padding-right: 3rem;
+    animation-name: translate-left;
+    animation-duration: 1s;
+}
+
+.Home-hero-div-image {
+    flex: 0 0 50%;
+}
+
+@keyframes translate-right {
+    from {transform: translateX(-6.25rem);}
+    to {transform: translateX(0);}
+}
+
+@keyframes translate-left {
+    from {transform: translateX(2.25rem);}
+    to {transform: translateX(0);}
+}
+
+.Home-hero-image {
+    max-width: 100%;
+    max-height: 100vh;
+    float: right;
+    padding-top: 5.25rem;
+    animation-name: translate-right;
+    animation-duration: 1s;
+}
+
+.Home-hero-div-title {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #000000;
+    display: block;
+}
+
+.Home-hero-div-desc {
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: #000000;
+    margin-top: 1.375rem;
+}
+
+.Home-hero-div-buttons-container {
+    margin-top: 3.3125rem;
+}
+
+.Home-hero-div-button-filled {
+    margin-right: 1.375rem;
+    background: #1360A5;
+    border-radius: 0.25rem;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #FDFDFD;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Home-hero-div-button-unfilled {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #1360A5;
+    background: #FDFDFD;
+    padding: 0.625rem 1.25rem;
+    border: 1px solid #D5E8F7;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Home-about {
+    margin-top: 7.5rem;
+    padding: 0 6.25rem;
+}
+
+.Home-about-content {
+    display: flex;
+    margin: 2.375rem -0.625rem -0.625rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Home-team {
+    margin-top: 7.5rem;
+    padding: 0 6.25rem;
+}
+
+.Home-team-content {
+    display: flex;
+    margin: 2.375rem -0.625rem -0.625rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Home-links {
+    margin-top: 7.5rem;
+    padding: 0 6.25rem;
+}
+
+.Home-links-content {
+    display: flex;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    /* justify-content: space-between; */
+}
+
+.Home-contact {
+    margin-top: 7.5rem;
+    margin-bottom: 8.25rem;
+    padding: 0 6.25rem;
+}
+
+.Home-contact-content {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.Home-contact iframe {
+    flex: 0 0 50%;
+    width: 600;
+    height: 450;
+}

@@ -1,0 +1,25 @@
+.SectionTitle {
+    position: relative;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.SectionTitle-text {
+    display: inline;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.SectionTitle-border-left {
+    position: relative;
+    top: 1rem;
+    left: 4rem;
+}
+
+.SectionTitle-border-right {
+    position: relative;
+    transform: rotate(180deg);
+    bottom: -2.5rem;
+    right: 4rem;
+}
