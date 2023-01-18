@@ -5,6 +5,7 @@ import './App.css';
 import Home from '../../pages/home/Home';
 import Programs from '../../pages/programs/Programs';
 import Error404 from '../../pages/Error404/Error404';
+import Apply from '../../pages/Apply/Apply';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
           <Route path='/' element={<Home />} exact/>
           <Route path='/programs' element={<Programs />}/>
+          <Route path='/apply' element={<Apply />}/>
           <Route path="*" element={<Error404 />} />
       </Routes>
     </Router>

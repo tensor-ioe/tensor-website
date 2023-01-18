@@ -27,7 +27,7 @@ export default function Navbar() {
                     Contact us
                 </HashLink>
                 {
-                /* location.pathname !== "/apply" && */
+                location.pathname !== "/apply" &&
                 <Link className={"Navbar-navlink-filled"} to={"/apply"}>
                     Apply
                 </Link>

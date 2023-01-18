@@ -58,6 +58,7 @@
     border: 0.125rem solid #FDFDFD;
     margin: 0 0.3125rem;
     background: #FDFDFD;
+    cursor: pointer;
 }
 
 .ImageCarousel-dot.ImageCarousel-dot-active {
