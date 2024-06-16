@@ -1,3 +1,4 @@
+import axios from "axios";
 import { React, useState } from "react";
 
 const ApplyForm = () => {
@@ -23,17 +24,21 @@ const ApplyForm = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
+    const appliedPositions = positions.toString();
     const data = {
-      name,
-      email,
-      rollNo,
-      positions,
-      question1,
-      question2,
-      question3,
-      feedbacks,
+      Name: name,
+      Email: email,
+      Roll: rollNo,
+      Positions: appliedPositions,
+      Question1: question1,
+      Question2: question2,
+      Question3: question3,
+      Feedbacks: feedbacks,
     };
-    console.log(data);
+    axios.post("api/link/to/google/sheet", data).then((Response) => {
+      console.log(Response);
+    });
+    // console.log(data);
   };
   return (
     <>
