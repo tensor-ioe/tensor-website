@@ -37,9 +37,16 @@ const ApplyForm = () => {
   };
   return (
     <>
-      <form action="submit" onSubmit={handleSubmitForm}>
-        <div className="mt-4 mb-4 flex flex-col">
-          <label className=" mb-2 text-center font-bold" htmlFor="title">
+      <form
+        action="submit"
+        onSubmit={handleSubmitForm}
+        className=" md:w-3/5 lg:w-5/12 self-center "
+      >
+        <div className="mt-4 mb-4 flex flex-col md:mb-8 lg:mb-10">
+          <label
+            className=" mb-2 md:mb-4 text-center font-bold"
+            htmlFor="title"
+          >
             Personal Details
           </label>
           <input
@@ -49,7 +56,7 @@ const ApplyForm = () => {
             onChange={(e) => {
               setName(e.target.value);
             }}
-            className=" w-full py-1 my-1 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
+            className=" w-full py-1 my-2 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
             required
           />
           <input
@@ -59,7 +66,7 @@ const ApplyForm = () => {
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            className=" w-full py-1 my-1 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
+            className=" w-full py-1 my-2 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
             required
           />
           <input
@@ -69,12 +76,15 @@ const ApplyForm = () => {
             onChange={(e) => {
               setRollNo(e.target.value);
             }}
-            className=" w-full py-1 my-1 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
+            className=" w-full py-1 my-2 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
             required
           />
         </div>
         <div className="mt-3 mb-4 flex flex-col">
-          <label className=" mb-2 text-center font-bold" htmlFor="title">
+          <label
+            className=" mb-2 text-center font-bold md:mb-4"
+            htmlFor="title"
+          >
             Roles and Skills
           </label>
           <label
@@ -151,7 +161,10 @@ const ApplyForm = () => {
               General Member
             </label>
           </span>
-          <label htmlFor="question1" className=" my-2 text-left font-medium">
+          <label
+            htmlFor="question1"
+            className=" my-2 md:mt-4 text-left font-medium"
+          >
             Any specefic skill set that can be utilized in above mentioned
             domains ?
           </label>
@@ -162,18 +175,18 @@ const ApplyForm = () => {
             onChange={(e) => {
               setQuestion1(e.target.value);
             }}
-            className=" w-full mt-1 h-28 py-1 my-1 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
+            className=" w-full mt-1 h-28 md:h-32 lg:h-48 py-1 my-1 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
             required
           ></textarea>
         </div>
         <div className="mt-4 mb-4 flex flex-col">
           <label
-            className=" mb-2 text-center font-bold"
+            className=" mb-2 md:mb-4 md:mt-4 text-center font-bold"
             htmlFor="personalDetails"
           >
             Personal Expression
           </label>
-          <label htmlFor="question2" className=" text-left mt-1 font-medium">
+          <label htmlFor="question2" className=" text-left mt-1  font-medium">
             Why do you want to be part of this community ?
           </label>
           <textarea
@@ -183,11 +196,14 @@ const ApplyForm = () => {
             onChange={(e) => {
               setQuestion2(e.target.value);
             }}
-            className=" w-full mt-2 mb-4 h-28 py-1 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
+            className=" w-full mt-2 mb-4 h-28 md:h-32 lg:h-48 py-1 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
             required
           ></textarea>
 
-          <label htmlFor="question1" className=" text-left mt-1 font-medium">
+          <label
+            htmlFor="question1"
+            className=" text-left mt-1 md:mt-4 font-medium"
+          >
             How do you plan to contributr to the community as part of the above
             mentioned domain ?
           </label>
@@ -198,10 +214,13 @@ const ApplyForm = () => {
             onChange={(e) => {
               setQuestion3(e.target.value);
             }}
-            className=" w-full h-28 mt-2 mb-4 py-1 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
+            className=" w-full h-28 md:h-32 lg:h-48 mt-2 mb-4 py-1 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
             required
           ></textarea>
-          <label htmlFor="feedback" className=" text-left mt-1 font-medium">
+          <label
+            htmlFor="feedback"
+            className=" text-left mt-1 md:mt-4 font-medium"
+          >
             Any query or feedbacks ? (optional)
           </label>
           <textarea
@@ -211,12 +230,12 @@ const ApplyForm = () => {
             onChange={(e) => {
               setFeedbacks(e.target.value);
             }}
-            className=" w-full h-28 mt-2 mb-4 py-1 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
+            className=" w-full h-28 md:h-32 lg:h-48 mt-2 mb-4 py-1 px-2 outline-none bg-inherit border-solid border-2 border-sky-400 rounded-md"
           ></textarea>
         </div>
         <button
           type="submit"
-          className="m-2 px-4 py-2 rounded-md font-semibold text-white bg-sky-500 hover:bg-sky-700 cursor-pointer"
+          className="m-2 px-4 md:px-10 py-2 rounded-md font-semibold text-white bg-sky-500 hover:bg-sky-700 cursor-pointer"
         >
           Submit
         </button>
