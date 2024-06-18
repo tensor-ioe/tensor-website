@@ -35,9 +35,14 @@ const ApplyForm = () => {
       Question3: question3,
       Feedbacks: feedbacks,
     };
-    axios.post("api/link/to/google/sheet", data).then((Response) => {
-      console.log(Response);
-    });
+    axios
+      .post(
+        "https://sheet.best/api/sheets/1e8147c9-accc-459c-9b1e-876cc52abd62",
+        data
+      )
+      .then((Response) => {
+        console.log(Response);
+      });
     // console.log(data);
   };
   return (
