@@ -1,5 +1,6 @@
 import axios from "axios";
 import { React, useState } from "react";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const ApplyForm = () => {
   const [name, setName] = useState("");

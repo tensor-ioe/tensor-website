@@ -11,7 +11,7 @@ export default function Apply() {
     <div className="Apply">
       <Navbar />
       <section className="Apply-section">
-        {/* <SectionTitle title={"Apply for a role"} /> */}
+        <SectionTitle title={"Apply for a role"} />
 
         <div className="Apply-content">
           {applicationClosed ? (

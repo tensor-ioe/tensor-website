@@ -102,17 +102,17 @@ export default function Home() {
         <div className="Home-team-content">
           <TeamPhoto
             name={"Khemraj Shrestha"}
-            image={"/images/member/team-member-photo-2.jpg"}
+            image={"/images/member/khemraj.jpg"}
             post={"President"}
           />
           <TeamPhoto
             name={"Prabesh Babu Adhikari"}
-            image={"/images/member/team-member-photo-2.jpg"}
+            image={"/images/member/prabesh.png"}
             post={"Secretary"}
           />
           <TeamPhoto
             name={"Nirika Lamichhane"}
-            image={"/images/member/team-member-photo-2.jpg"}
+            image={"/images/member/nirika.jpg"}
             post={"Joint Secretary"}
           />
           <TeamPhoto
@@ -122,23 +122,23 @@ export default function Home() {
           />
           <TeamPhoto
             name={"Ishwor Raj Pokhrel"}
-            image={"/images/member/team-member-photo-2.jpg"}
+            image={"/images/member/ishwor.jpg"}
             post={"Software Coordinator"}
           />
           <TeamPhoto
             name={"Jatin Raut"}
-            image={"/images/member/team-member-photo-2.jpg"}
+            image={"/images/member/jatin.jpg"}
             post={"Event and HR"}
           />
           <TeamPhoto
             name={"Shreya Adhikari"}
-            image={"/images/member/team-member-photo-2.jpg"}
+            image={"/images/member/shreya.jpg"}
             post={"Marketing Director"}
           />
 
           <TeamPhoto
             name={"Pankaj Kumar Mehta"}
-            image={"/images/member/team-member-photo-2.jpg"}
+            image={"/images/member/pankaj.jpg"}
             post={"Junior Research Advocate"}
           />
         </div>
