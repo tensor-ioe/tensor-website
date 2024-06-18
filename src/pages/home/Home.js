@@ -35,8 +35,11 @@ export default function Home() {
             adipiscing elit
           </h1>
           <h2 className="Home-hero-div-desc">
-            Imperdiet aliquam, quam amet aenean quis bibendum augue elementum.
-            Id id posuere ultrices sapien nisl.
+            Welcome to Tensor IOE Thapathali,a community where innovation meets
+            passion. Here, we are dedicated to empowering students with the
+            skills and knowledge to excel in the dynamic field of data
+            engineering. Our club brings together like-minded individuals who
+            are eager to learn, explore and create.
           </h2>
           <div className="Home-hero-div-buttons-container">
             <Link className="Home-hero-div-button-filled" to={"/apply"}>
@@ -64,31 +67,31 @@ export default function Home() {
         <SectionTitle title={"About Tensor"} />
         <div className="Home-about-content">
           <AboutCard
-            title={"Lorem ipsum"}
+            title={"Innovation and Creativity"}
             image={aboutCardImg}
             description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing eliquet nibh libero aliquet integer. Lorem ipsum dolor sit amet, consectetur adipiscing eliquet nibh libero aliquet."
+              "Fosters a culture of innovation and creativity by encouraging members to think outside the box, experiment with new ideas, and develop unique solutions to advance technology and engineering."
             }
           />
           <AboutCard
-            title={"Lorem ipsum"}
+            title={"Cultivating Skills"}
             image={aboutCardImg}
             description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing eliquet nibh libero aliquet integer. Lorem ipsum dolor sit amet, consectetur adipiscing eliquet nibh libero aliquet."
+              "Prioritizes enriching members and students through comprehensive programs and interactive workshops that foster learning, growth, and practical skills development in data science, AI and ML"
             }
           />
           <AboutCard
-            title={"Lorem ipsum"}
+            title={"Driving Data-Driven Insights"}
             image={aboutCardImg}
             description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing eliquet nibh libero aliquet integer. Lorem ipsum dolor sit amet, consectetur adipiscing eliquet nibh libero aliquet."
+              "Enhances members' proficiency in data science, making them more data-driven and knowledgeable about the intricacies of the field and the broader data science landscape through pioneering research."
             }
           />
           <AboutCard
-            title={"Lorem ipsum"}
+            title={"Collaboration and Community"}
             image={aboutCardImg}
             description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing eliquet nibh libero aliquet integer. Lorem ipsum dolor sit amet, consectetur adipiscing eliquet nibh libero aliquet."
+              "Creates a supportive environment for students to learn, grow, and collaborate on diverse tech projects, sharing knowledge and experiences to drive collective success and innovation"
             }
           />
         </div>
@@ -98,44 +101,45 @@ export default function Home() {
         <SectionTitle title={"Our Team"} />
         <div className="Home-team-content">
           <TeamPhoto
-            name={"John Doe"}
+            name={"Khemraj Shrestha"}
             image={"/images/member/team-member-photo-2.jpg"}
-            post={"Coordinator"}
+            post={"President"}
           />
           <TeamPhoto
-            name={"John Doe"}
+            name={"Prabesh Babu Adhikari"}
             image={"/images/member/team-member-photo-2.jpg"}
-            post={"Coordinator"}
+            post={"Secretary"}
           />
           <TeamPhoto
-            name={"John Doe"}
+            name={"Nirika Lamichhane"}
             image={"/images/member/team-member-photo-2.jpg"}
-            post={"Coordinator"}
+            post={"Joint Secretary"}
           />
           <TeamPhoto
-            name={"John Doe"}
+            name={"Jivan Acharya"}
             image={"/images/member/team-member-photo-2.jpg"}
-            post={"Coordinator"}
+            post={"Research Advocate"}
           />
           <TeamPhoto
-            name={"John Doe"}
+            name={"Ishwor Raj Pokhrel"}
             image={"/images/member/team-member-photo-2.jpg"}
-            post={"Coordinator"}
+            post={"Software Coordinator"}
           />
           <TeamPhoto
-            name={"John Doe"}
+            name={"Jatin Raut"}
             image={"/images/member/team-member-photo-2.jpg"}
-            post={"Coordinator"}
+            post={"Event and HR"}
           />
           <TeamPhoto
-            name={"John Doe"}
+            name={"Shreya Adhikari"}
             image={"/images/member/team-member-photo-2.jpg"}
-            post={"Coordinator"}
+            post={"Marketing Director"}
           />
+
           <TeamPhoto
-            name={"John Doe"}
+            name={"Pankaj Kumar Mehta"}
             image={"/images/member/team-member-photo-2.jpg"}
-            post={"Coordinator"}
+            post={"Junior Research Advocate"}
           />
         </div>
       </section>
