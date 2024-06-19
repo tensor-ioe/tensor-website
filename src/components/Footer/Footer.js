@@ -4,7 +4,7 @@ import './Footer.css';
 export default function Footer() {
     return (
         <div className="Footer">
-            <p className="Footer-text">Copyright © 2022 | Tensor</p>
+            <p className="Footer-text">Copyright © 2024 | Tensor</p>
         </div>
     );
 }
