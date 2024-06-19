@@ -28,11 +28,11 @@ export default function Home() {
       <section id="home" className="Home-hero-section">
         <div className="Home-hero-div-main">
           <h1 className="Home-hero-div-title">
-            Lorem ipsum dolor sit amet
+            TENSOR, <span className=" text-blue-800">a tech community:</span>
             <br />
-            consectetur bibendum
+            Promotes learning through events,
             <br />
-            adipiscing elit
+            workshops & AI research
           </h1>
           <h2 className="Home-hero-div-desc">
             Welcome to Tensor IOE Thapathali,a community where innovation meets

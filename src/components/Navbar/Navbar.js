@@ -26,9 +26,16 @@ export default function Navbar() {
         <HashLink className={"Navbar-navlink"} smooth to={"/#contact"}>
           Contact us
         </HashLink>
-        {location.pathname !== "/apply" && (
+        {location.pathname !== "/apply" ? (
           <Link className={"Navbar-navlink-filled"} to={"/apply"}>
             Apply
+          </Link>
+        ) : (
+          <Link
+            className={"Navbar-navlink-filled"}
+            to={"roles-and-responsibility"}
+          >
+            Responsibiliy
           </Link>
         )}
       </div>

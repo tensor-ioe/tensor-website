@@ -1,4 +1,5 @@
 import axios from "axios";
+import { list } from "postcss";
 import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -11,12 +12,22 @@ const ApplyForm = ({ apiKey }) => {
   const [question2, setQuestion2] = useState("");
   const [question3, setQuestion3] = useState("");
   const [feedbacks, setFeedbacks] = useState("");
-  const [positions, setPositions] = useState(["General Member"]);
+  const [positions, setPositions] = useState([]);
+  const [disableInput, setDisableInput] = useState(false);
 
   const handlePositions = (e) => {
+    // console.log("This is positions");
+    // console.log(positions);
+    // console.log(positions.length);
     const { name, checked } = e.target;
+
     setPositions((prevPositions) => {
       if (checked) {
+        if (positions.length >= 2) {
+          setDisableInput(true);
+        } else {
+          setDisableInput(false);
+        }
         return [...prevPositions, name];
       } else {
         return prevPositions.filter((position) => position != name);
@@ -26,19 +37,22 @@ const ApplyForm = ({ apiKey }) => {
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
+    // positions.pop();
     const appliedPositions = positions.toString();
     const data = {
       Name: name,
       Email: email,
       Roll: rollNo,
       Positions: appliedPositions,
-      Question1: question1,
-      Question2: question2,
-      Question3: question3,
+      Any_specefic_skill_set_that_can_be_utilized_in_above_mentioned_domains:
+        question1,
+      Why_do_you_want_to_be_part_of_this_community: question2,
+      How_do_you_plan_to_contributr_to_the_community_as_part_of_the_above_mentioned_domain:
+        question3,
       Feedbacks: feedbacks,
     };
     try {
-      await axios.post(`https://sheet.best/api/sheegts/${apiKey}`, data);
+      await axios.post(`https://sheet.best/api/sheets/${apiKey}`, data);
       navigate("success");
     } catch (error) {
       console.log(error);
@@ -101,7 +115,7 @@ const ApplyForm = ({ apiKey }) => {
             htmlFor="intrestedRoles"
             className=" mt-1 mb-2 text-left font-medium"
           >
-            Which role are you intrested in ? (Max 2)
+            Which role are you intrested in ? <br/> <i>Check the box according to your priority order (Maximum 3). </i>
           </label>
           <span className=" flex justify-center my-1 self-start">
             <input
@@ -109,6 +123,7 @@ const ApplyForm = ({ apiKey }) => {
               type="checkbox"
               name="Research Advocate"
               onChange={handlePositions}
+              disabled={disableInput}
             />
             <label className=" ml-1" htmlFor="checkboxLabel">
               Research Advocate
@@ -118,8 +133,21 @@ const ApplyForm = ({ apiKey }) => {
             <input
               className=" w-5 h-5"
               type="checkbox"
+              name="Software Coordinator"
+              onChange={handlePositions}
+              disabled={disableInput}
+            />
+            <label className=" ml-1" htmlFor="checkboxLabel">
+              Software Coordinator
+            </label>
+          </span>
+          <span className=" flex justify-center my-1 self-start">
+            <input
+              className=" w-5 h-5"
+              type="checkbox"
               name="Web Developer"
               onChange={handlePositions}
+              disabled={disableInput}
             />
             <label className=" ml-1" htmlFor="checkboxLabel">
               Web Developer
@@ -129,19 +157,22 @@ const ApplyForm = ({ apiKey }) => {
             <input
               className=" w-5 h-5"
               type="checkbox"
-              name="Social Media Manager"
+              name="Event Manager"
               onChange={handlePositions}
+              disabled={disableInput}
             />
             <label className=" ml-1" htmlFor="checkboxLabel">
-              Social media Manager
+              Event Manager
             </label>
-          </span>
+          
+            </span>
           <span className=" flex justify-center my-1 self-start">
             <input
               className=" w-5 h-5"
               type="checkbox"
               name="Graphics Designer"
               onChange={handlePositions}
+              disabled={disableInput}
             />
             <label className=" ml-1" htmlFor="checkboxLabel">
               Graphics Designer
@@ -151,21 +182,21 @@ const ApplyForm = ({ apiKey }) => {
             <input
               className=" w-5 h-5"
               type="checkbox"
-              name="Event Manager"
+              name="Social Media Manager"
               onChange={handlePositions}
+              disabled={disableInput}
             />
             <label className=" ml-1" htmlFor="checkboxLabel">
-              Event Manager
+              Social media Manager
             </label>
           </span>
           <span className=" flex justify-center my-1 self-start">
             <input
               className=" w-5 h-5"
               type="checkbox"
-              disabled
-              checked
               name="General Member"
               onChange={handlePositions}
+              disabled={disableInput}
             />
             <label className=" ml-1" htmlFor="checkboxLabel">
               General Member
