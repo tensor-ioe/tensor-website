@@ -117,8 +117,8 @@ export default function Home() {
           />
           <TeamPhoto
             name={"Jivan Acharya"}
-            image={"/images/member/team-member-photo-2.jpg"}
-            post={"Research Advocate"}
+            image={"/images/member/jivan.png"}
+            post={"Senior Research Advocate"}
           />
           <TeamPhoto
             name={"Ishwor Raj Pokhrel"}
@@ -135,11 +135,16 @@ export default function Home() {
             image={"/images/member/shreya.jpg"}
             post={"Marketing Director"}
           />
+          <TeamPhoto
+            name={"Rijan Pokhrel"}
+            image={"/images/member/rijan.jpg"}
+            post={"Research Advocate"}
+          />
 
           <TeamPhoto
             name={"Pankaj Kumar Mehta"}
             image={"/images/member/pankaj.jpg"}
-            post={"Junior Research Advocate"}
+            post={"Research Advocate"}
           />
         </div>
       </section>

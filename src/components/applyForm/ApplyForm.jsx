@@ -1,8 +1,9 @@
 import axios from "axios";
 import { React, useState } from "react";
-import SectionTitle from "../SectionTitle/SectionTitle";
+import { useNavigate } from "react-router-dom";
 
-const ApplyForm = () => {
+const ApplyForm = ({ apiKey }) => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [rollNo, setRollNo] = useState("");
@@ -23,7 +24,7 @@ const ApplyForm = () => {
     });
   };
 
-  const handleSubmitForm = (e) => {
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
     const appliedPositions = positions.toString();
     const data = {
@@ -36,15 +37,13 @@ const ApplyForm = () => {
       Question3: question3,
       Feedbacks: feedbacks,
     };
-    axios
-      .post(
-        "https://sheet.best/api/sheets/1e8147c9-accc-459c-9b1e-876cc52abd62",
-        data
-      )
-      .then((Response) => {
-        console.log(Response);
-      });
-    // console.log(data);
+    try {
+      await axios.post(`https://sheet.best/api/sheegts/${apiKey}`, data);
+      navigate("success");
+    } catch (error) {
+      console.log(error);
+      navigate("networkError");
+    }
   };
   return (
     <>
@@ -177,7 +176,7 @@ const ApplyForm = () => {
             className=" my-2 md:mt-4 text-left font-medium"
           >
             Any specefic skill set that can be utilized in above mentioned
-            domains ?
+            domains ? <span className=" text-red-600  text-xl">*</span>
           </label>
           <textarea
             name="answer2"
@@ -199,6 +198,7 @@ const ApplyForm = () => {
           </label>
           <label htmlFor="question2" className=" text-left mt-1  font-medium">
             Why do you want to be part of this community ?
+            <span className=" text-red-600  text-xl"> *</span>
           </label>
           <textarea
             name="answer2"
@@ -216,7 +216,7 @@ const ApplyForm = () => {
             className=" text-left mt-1 md:mt-4 font-medium"
           >
             How do you plan to contributr to the community as part of the above
-            mentioned domain ?
+            mentioned domain ?<span className=" text-red-600  text-xl"> *</span>
           </label>
           <textarea
             name="answer2"
@@ -232,7 +232,7 @@ const ApplyForm = () => {
             htmlFor="feedback"
             className=" text-left mt-1 md:mt-4 font-medium"
           >
-            Any query or feedbacks ? (optional)
+            Any query or feedbacks ?
           </label>
           <textarea
             name="answer2"

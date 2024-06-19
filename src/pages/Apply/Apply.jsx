@@ -23,7 +23,7 @@ export default function Apply() {
             </div>
           ) : (
             <div className="Apply-form p-2 flex flex-col">
-              <ApplyForm />
+              <ApplyForm apiKey={process.env.REACT_APP_SPREADSHEET_API_KEY} />
             </div>
           )}
         </div>
